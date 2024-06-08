@@ -10,7 +10,7 @@ export function useMovies(query, callback) {
 
   useEffect(
     function () {
-      callback?.();
+      // callback?.();
 
       const controller = new AbortController();
 
@@ -54,7 +54,7 @@ export function useMovies(query, callback) {
         controller.abort();
       };
     },
-    [query, callback]
+    [query]
   );
 
   return { movies, isLoading, error };
