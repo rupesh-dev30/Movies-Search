@@ -65,7 +65,7 @@ export default function App() {
     const storedValue = localStorage.getItem("watched");
     return JSON.parse(storedValue);
   });
-  
+
   /*
   useEffect(function () {
     console.log("After initial render");
@@ -229,6 +229,12 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
+  useEffect(function(){
+    const el = document.querySelector('.search');
+    console.log(el);
+    el.focus();
+  },[]);
+
   return (
     <input
       className="search"
