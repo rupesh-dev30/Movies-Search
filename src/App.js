@@ -248,7 +248,7 @@ function Search({ query, setQuery }) {
     return () => document.addEventListener('keydown', callback);
 
     // inputEl.current.focus();
-  }, [])
+  }, [setQuery])
 
   // useEffect(function(){
   //   const el = document.querySelector('.search');
